@@ -10,3 +10,5 @@ Use Rapsberry PIO and temperature senosrs in beer homebrewing process. And may e
 ### Lesson 1
 
 LED light - modified with try catch and user input for blinking
+
+Additional script pinstatus - print out state (high/low) of a specific GPIO-PIN
