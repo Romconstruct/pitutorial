@@ -1,24 +1,33 @@
 #!/usr/bin/python3
-import RPi.GPIO as GPIO
+import RPi.GPIO as io
+import sys
 import time
 
-#use GPIO PIN-Numbers
-GPIO.setmode(GPIO.BOARD)
+try:
+    counter = int(input("How often should LED blink?"))
+    lightTime = int(input("And how long in seconds?"))
 
-# PIN 7 equals GPIO 7
-GPIO.setup(7, GPIO.OUT)
+    #use GPIO PIN-Numbers
+    io.setmode(io.BOARD)
 
-# Set PIN 7
-GPIO.output(7, GPIO.HIGH)
+    # PIN 7 equals GPIO 7
+    io.setup(7, io.OUT)
 
-# Blink for 5 times for 3 seconds
-for x in range (0, 5):
-   time.sleep(3) 
-   GPIO.output(7, GPIO.LOW)
-   time.sleep(3)
-   GPIO.output(7, GPIO.HIGH)
+    # Blink for 5 times for 3 seconds
+    for x in range (0, counter):
+        io.output(7, 1) 
+        time.sleep(lightTime) 
+        io.output(7, 0)
+        time.sleep(lightTime)
 
-# reset PIN
-GPIO.cleanup()
+except KeyboardInterrupt:
+    print ("Manual user exit occured!")
+
+except:
+    print ("Some error or exception occured!")
+
+finally:
+    # reset PIN
+    io.cleanup()
 
 
