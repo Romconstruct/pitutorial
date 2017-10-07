@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 
-# Small script to check state of a GPIO pin
+#----------------------------------------------------
+# File name     : pinstatus.py
+# Despription   : Check state of a GPIO pin
+# Author        : Romconstruct
+# E-mail        : mail@romconstruct.org
+# Website       : www.romconstruct.org
+# Date          : 2017/10/07
+#----------------------------------------------------
 
 # Imports
 import RPi.GPIO as io
@@ -31,4 +38,3 @@ except:
 finally:
     # reset PIN
     io.cleanup()
-

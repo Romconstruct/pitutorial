@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#-----------------------------------------------------
+#----------------------------------------------------
 # File name     : led_1.py
 # Despription   : Blinking LED with user input
 # Author        : Romconstruct
